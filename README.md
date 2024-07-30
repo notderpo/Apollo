@@ -1,2 +1,2 @@
 # Apollo
-An Open Source discord Attendance bot. 
+An Open Source discord attendance bot. 
