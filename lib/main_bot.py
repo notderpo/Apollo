@@ -2,8 +2,8 @@
 # Make sure to change DISCORD_TOKEN and DISCORD_GUILD in .env 
 
 import os
-
 import discord
+
 from dotenv import load_dotenv
 from discord.ext import commands 
 
