@@ -10,7 +10,7 @@ from nylas.models.auth import URLForAuthenticationConfig
 from nylas.models.auth import CodeExchangeRequest
 from datetime import datetime, timedelta
 
-# Create the app
+# Create the app 
 app = Flask(__name__)
 app.config["SESSION_PERMANENT"] = False
 app.config["SESSION_TYPE"] = "filesystem"
@@ -26,7 +26,7 @@ nylas = Client(
 def login():
   if session.get("grant_id") is None:
     config = URLForAuthenticationConfig({
-      "client_id": "<NYLAS_CLIENT_ID>",
+      "client_id": "<NYLAS_GRANT_ID>",
       "redirect_uri" : "http://localhost:5000/oauth/exchange"
     })
 
@@ -35,3 +35,5 @@ def login():
     return redirect(url)
   else:
       return f'{session["grant_id"]}'  
+    
+def call_calendar():
